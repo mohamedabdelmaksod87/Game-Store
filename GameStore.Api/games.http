@@ -1,0 +1,27 @@
+@port = 3000
+###
+GET http://localhost:{{port}}/games
+###
+GET http://localhost:{{port}}/games/7
+###
+POST http://localhost:{{port}}/games
+Content-Type: application/json
+
+{
+  "name": "Final Fantasy VII",
+  "genreId": 2,
+  "price": 55.55,
+  "releaseDate": "2013-03-24"
+}
+###
+PUT http://localhost:{{port}}/games/1
+Content-Type: application/json
+
+{
+  "name": "Fifa 20",
+  "genreId": 1,
+  "price": 19.99,
+  "releaseDate": "2020-03-24"
+}
+###
+DELETE http://localhost:{{port}}/games/7
