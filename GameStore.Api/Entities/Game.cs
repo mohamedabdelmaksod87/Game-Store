@@ -10,6 +10,8 @@ public class Game
 
   public required DateOnly ReleaseDate { get; set; }
 
+  public required string ImageUri { get; set; } // TODO: use https://placehold.co/100 for default image
+
   public required int GenreId { get; set; }
 
   public Genre Genre { get; set; } = null!;
